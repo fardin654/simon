@@ -12,6 +12,14 @@ $(document).keypress(function(){
             started = true;},100)
     }
 });
+$(document).click(function(){
+    if (!started) {
+        setTimeout(function(){
+            $("#level-title").text("Level " + level);
+            nextSequence();
+            started = true;},100)
+    }
+});
 
 $(".btn").click(function(event){
 
